@@ -19,28 +19,17 @@
             "versions": [
               {
                 "version": "Version 1",
-                "groups": [
-                  {
-                    "group": "French",
-                    "pages": [
-                      "fr/v1/analytics"
-                    ]
-                  },
-                  {
-                    "group": "English",
-                    "pages": [
-                      "v1/index",
-                      "v1/getting-started",
-                      "v1/integrations",
-                      "v1/pricing",
-                      "v1/troubleshooting",
-                      "v1/analytics",
-                      "v1/quality",
-                      "v1/inventory",
-                      "v1/changelog",
-                      "v1/api-reference"
-                    ]
-                  }
+                "pages": [
+                  "v1/index",
+                  "v1/getting-started",
+                  "v1/integrations",
+                  "v1/pricing",
+                  "v1/troubleshooting",
+                  "v1/analytics",
+                  "v1/quality",
+                  "v1/inventory",
+                  "v1/changelog",
+                  "v1/api-reference"
                 ]
               },
               {
@@ -73,8 +62,11 @@
                   "fr/v1/integrations",
                   "fr/v1/pricing",
                   "fr/v1/troubleshooting",
+                  "fr/v1/analytics",
                   "fr/v1/quality",
-                  "fr/v1/inventory"
+                  "fr/v1/inventory",
+                  "fr/v1/changelog",
+                  "fr/v1/api-reference"
                 ]
               },
               {
@@ -90,6 +82,7 @@
                   "fr/v2/quality",
                   "fr/v2/inventory",
                   "fr/v2/api-reference",
+                  "fr/v2/changelog",
                   "fr/v2/advanced-usage"
                 ]
               }

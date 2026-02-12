@@ -1,0 +1,28 @@
+---
+title: "Take-home Assessment"
+sidebarTitle: "Take-home Assessment"
+---
+
+# Task 1 Deliverables
+
+The first thing I had to learn was how to use Mintlify and connect it to Github. I was following the Mintlify Documentation resource when I realized that it was for creating an entirely new repo based off of the Mintlify sample template. So I uploaded the take-home assessment to my Github directly and then connected it to Mintlify, so I could edit the assessment directly in Mintlify.
+
+## Decision-Making Process
+
+In terms of refactoring the navigation structure in 'docs.json' to provide the best possible user experience while ensuring all content remains accessible, I first added all the documentation in the files directory to the navigation editor. In this process, I noticed that some of the 'v1' pages were missing, so I added those as well.
+
+After that, I noticed that 'v1' was in a group and not using Mintlify's version navigation element. So I used two version navigation elements to organize the v1 and v2 files.
+
+## Key User Experience Improvements
+
+Since users usually want to read up on the most updated version of whatever they are looking into, I made v2 the default.
+
+For language, since English is widely used across various countries, I decided to use that as the default language. This is also recommended according to Mintlify's documentation.
+
+## Trade-Offs Considered
+
+When I tried to add in the French translations, I ran into a cross-roads on how to structure the navigation menu. Would it be better to use the language navigation element as a higher level parent or the product navigation element?
+
+## Structure that Scales for Future Growth
+
+I decided to use the product navigation element since I felt like it would scale better for a company's future growth. If the company decides to create a new product or tool, then they can easier add in another product navigation element and add documentation for it. Then within that product, they can add in languages as documentation is translated.
