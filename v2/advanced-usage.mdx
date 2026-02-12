@@ -19,13 +19,14 @@ v2.0's AI forecasting engine uses multiple machine learning models to predict sa
 ### Configuring Advanced Forecasting
 
 
-1. **Select Forecast Horizon**
+<Steps>
+  <Step title="Select Forecast Horizon">
    Choose your forecasting window based on your operational needs:
     - **Short-term (7 days)**: Daily production planning
     - **Medium-term (14 days)**: Ingredient ordering and staffing
     - **Long-term (30+ days)**: Strategic planning and seasonal prep
-
-2. **Configure Data Sources**
+  </Step>
+  <Step title="Configure Data Sources">
    Connect additional data sources to improve accuracy:
     ```javascript
     const forecastConfig = {
@@ -45,12 +46,14 @@ v2.0's AI forecasting engine uses multiple machine learning models to predict sa
       }
     };
     ```
-
-3. **Set Alert Thresholds**
+  </Step>
+  <Step title="Set Alert Thresholds">
    Configure alerts for significant forecast changes or anomalies.
-
-4. **Enable Auto-Actions**
+  </Step>
+  <Step title="Enable Auto-Actions">
    Let AI automatically adjust production schedules based on forecasts.
+  </Step>
+</Steps>
 
 
 
@@ -157,21 +160,24 @@ history = client.iot.query_history(
 AI analyzes sensor patterns to predict equipment failures before they occur:
 
 
-1. **Equipment Profiling**
+<Steps>
+  <Step title="Equipment Profiling">
    System learns normal operating parameters for each piece of equipment.
-
-2. **Anomaly Detection**
+  </Step>
+  <Step title="Anomaly Detection">
    ML models detect subtle changes that indicate potential issues:
     - Temperature fluctuations
     - Unusual vibration patterns
     - Performance degradation
     - Power consumption changes
-
-3. **Failure Prediction**
+  </Step>
+  <Step title="Failure Prediction">
    Predicts equipment failures 3-14 days in advance with 85% accuracy.
-
-4. **Automated Alerts**
+  </Step>
+  <Step title="Automated Alerts">
    Notifies maintenance team with specific recommended actions.
+  </Step>
+</Steps>
 
 
 
@@ -506,11 +512,23 @@ Implement caching for optimal performance:
 
 Advanced features require advanced support:
 
-- 📚 **Enterprise Documentation**: Comprehensive guides for enterprise features
-- 👨‍💼 **Dedicated Account Manager**: Personal contact for enterprise customers
-- 🛠️ **Professional Services**: Custom development and integration services
-- 🎓 **Training Programs**: On-site and virtual training for your team
-- 📞 **24/7 Support**: Enterprise support available around the clock
+<Columns cols={3}>
+  <Card title="Enterprise Documentation" icon="book">
+    Comprehensive guides for enterprise features
+  </Card>
+  <Card title="Dedicated Account Manager" icon="user-tie">
+    Personal contact for enterprise customers
+  </Card>
+  <Card title="Professional Services" icon="screwdriver-wrench">
+    Custom development and integration services
+  </Card>
+  <Card title="Training Programs" icon="graduation-cap">
+    On-site and virtual training for your team
+  </Card>
+  <Card title="24/7 Support" icon="phone">
+    Enterprise support available around the clock
+  </Card>
+</Columns>
 
 <Note>**Enterprise Support**: All advanced features include priority support with 1-hour response SLA for critical issues.</Note>
 
