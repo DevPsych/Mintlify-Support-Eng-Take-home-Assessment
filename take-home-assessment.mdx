@@ -13,15 +13,21 @@ In terms of refactoring the navigation structure in 'docs.json' to provide the b
 
 After that, I noticed that 'v1' was in a group and not using Mintlify's version navigation element. So I used two version navigation elements to organize the v1 and v2 files.
 
+For grouping the pages, I looked up popular documentation sites that use Mintlify like Stripe, Coinbase, and Perplexity to use as references on how to group pages. I noticed that most have an intro in the beginning that includes getting started quickly and pricing. Then it naturally progresses into integrations and features. Lastly, there is a section for developers to reference.
+
 ## Key User Experience Improvements
 
 Since users usually want to read up on the most updated version of whatever they are looking into, I made v2 the default.
 
 For language, since English is widely used across various countries, I decided to use that as the default language. This is also recommended according to Mintlify's documentation.
 
+I also grouped the pages so that users can go through the pages naturally. They get an overview of the app, then move onto specific features the app provides, and then learn how to use the app.
+
 ## Trade-Offs Considered
 
 When I tried to add in the French translations, I ran into a cross-roads on how to structure the navigation menu. Would it be better to use the language navigation element as a higher level parent or the product navigation element?
+
+I also looked into how to organize the pages a lot. I thought about whether I should cater to first time users or developers first. It seems more natural to cater to first time users and have resources for developers to reference later.
 
 ## Structure that Scales for Future Growth
 
