@@ -20,7 +20,7 @@
               {
                 "version": "v2.0",
                 "default": true,
-                "groups": [
+                "pages": [
                   {
                     "group": "Get Started",
                     "pages": [
@@ -46,7 +46,8 @@
                       "v2/troubleshooting",
                       "v2/advanced-usage"
                     ]
-                  }
+                  },
+                  "deliverables"
                 ]
               },
               {

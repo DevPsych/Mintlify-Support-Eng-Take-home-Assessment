@@ -3,11 +3,11 @@ title: "Take-home Assessment"
 sidebarTitle: "Take-home Assessment"
 ---
 
-# Task 1 Deliverables
+## Task 1 Deliverables
 
 The first thing I had to learn was how to use Mintlify and connect it to Github. I was following the Mintlify Documentation resource when I realized that it was for creating an entirely new repo based off of the Mintlify sample template. So I uploaded the take-home assessment to my Github directly and then connected it to Mintlify, so I could edit the assessment directly in Mintlify.
 
-## Decision-Making Process
+### Decision-Making Process
 
 In terms of refactoring the navigation structure in `docs.json` to provide the best possible user experience while ensuring all content remains accessible, I first added all the documentation in the files directory to the navigation editor. In this process, I noticed that some of the `v1` pages were missing, so I added those as well.
 
@@ -15,7 +15,7 @@ After that, I noticed that `v1` was in a group and not using Mintlify's version 
 
 For grouping the pages, I looked up popular documentation sites that use Mintlify like Stripe, Coinbase, and Perplexity to use as references on how to group pages. I noticed that most have an intro in the beginning that includes getting started quickly and pricing. Then it naturally progresses into integrations and features. Lastly, there is a section for developers to reference.
 
-## Key User Experience Improvements
+### Key User Experience Improvements
 
 Since users usually want to read up on the most updated version of whatever they are looking into, I made `v2` the default.
 
@@ -23,41 +23,41 @@ For language, since English is widely used across various countries, I decided t
 
 I also grouped the pages so that users can go through the pages naturally. They get an overview of the app, then move onto specific features the app provides, and then learn how to use the app.
 
-## Trade-Offs Considered
+### Trade-Offs Considered
 
 When I tried to add in the French translations, I ran into a cross-roads on how to structure the navigation menu. Would it be better to use the language navigation element as the highest level parent or the product navigation element?
 
 I also looked into how to organize the pages a lot. I thought about whether I should cater to first time users or developers first. It seems more natural to cater to first time users and have resources for developers to reference later.
 
-## Structure that Scales for Future Growth
+### Structure that Scales for Future Growth
 
 I decided to use the product navigation element since I felt like it would scale better for a company's future growth. If the company decides to create a new product or tool, then they can easily add in another product navigation element and add documentation for it. Then within that product, they can add in languages as documentation is translated.
 
-# Task 2 Deliverables
+## Task 2 Deliverables
 
-## Callouts
+### Callouts
 
 I saw that the original pages tried to highlight warnings, tips, and notes with bold letters, but I think Callouts make such info standout much better. The different colors and icons help users read through the documentation faster and catch important info easier.
 
-## Cards with Columns
+### Cards with Columns
 
 I liked how Preplexity used Cards at the end of their pages to link to other pages or to highlight important info. So I used cards in three cases: First when redirecting users to other sections of the documentation, second when highlighting contact information, and third when organizing feature overviews so they are easier to scan through.
 
-## Steps
+### Steps
 
 I added steps to whenever I saw the documentation directing the user to follow instructions. Some numbered lists were more like lists instead of directions, so I did not use Steps in those cases. This will help users differentiate numbered bullet points from instructions that require steps to follow.
 
-## Update
+### Update
 
 I changed the original `changelog` so that it uses Update. As long as future devs continue to use Update, then the format should stay consistent. It also automatically creates RSS entries.
 
-## Accordions + Accordion Groups
+### Accordions + Accordion Groups
 
 I found Accordions useful when organizing QA (in `Pricing`) or Problem/Solution type documentation (in `Troubleshooting`). By reducing the amount of text on the screen at one time, users will have an easier time scanning for relevant questions or problems they may have.
 
 I also used Accordions in `Integrations` since there were so many things that could be integrated. I wanted user to have an easier time finding integrations that were relevant to them.
 
-## Badges
+### Badges
 
 I used badges a little bit to highlight "New" bullet points in `Getting Started`. I think it helps users that are changing versions to see what has changed.
 
