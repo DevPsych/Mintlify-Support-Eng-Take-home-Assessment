@@ -13,99 +13,98 @@ Our v2.0 inventory management system uses artificial intelligence and IoT sensor
 
 ## Key Features
 
-### AI-Powered Tracking
+<Card title="AI-Powered Tracking">
+  Monitor your ingredient levels with intelligent predictions:
 
-Monitor your ingredient levels with intelligent predictions:
+  - **Predictive stock levels**: AI forecasts when you'll run out
+  - **Automated reordering**: Smart ordering based on usage patterns
+  - **Usage predictions**: Machine learning predicts ingredient needs
+  - **Anomaly detection**: AI identifies unusual consumption patterns
 
-- **Predictive stock levels**: AI forecasts when you'll run out
-- **Automated reordering**: Smart ordering based on usage patterns
-- **Usage predictions**: Machine learning predicts ingredient needs
-- **Anomaly detection**: AI identifies unusual consumption patterns
+  ```javascript
+  // Example: Get AI inventory predictions
+  const predictions = await salsa.ai.inventory.predict({
+    location: "kitchen_1",
+    horizon_days: 7
+  });
 
-```javascript
-// Example: Get AI inventory predictions
-const predictions = await salsa.ai.inventory.predict({
-  location: "kitchen_1",
-  horizon_days: 7
-});
+  console.log(`Predicted reorder date: ${predictions.reorder_date}`);
+  ```
+</Card>
+<Columns cols={2}>
+  <Card title="IoT Sensor Integration">
+    Real-time monitoring with connected sensors:
 
-console.log(`Predicted reorder date: ${predictions.reorder_date}`);
-```
+    - **RFID tracking**: Automatic ingredient scanning
+    - **Temperature sensors**: Monitor refrigeration conditions
+    - **Weight sensors**: Real-time stock level tracking
+    - **Freshness sensors**: Chemical sensors detect spoilage
+  </Card>
+  <Card title="Smart Waste Prevention">
+    AI-driven waste reduction:
 
-### IoT Sensor Integration
-
-Real-time monitoring with connected sensors:
-
-- **RFID tracking**: Automatic ingredient scanning
-- **Temperature sensors**: Monitor refrigeration conditions
-- **Weight sensors**: Real-time stock level tracking
-- **Freshness sensors**: Chemical sensors detect spoilage
-
-### Smart Waste Prevention
-
-AI-driven waste reduction:
-
-- Predicts optimal order quantities
-- Suggests recipes to use near-expiry ingredients
-- Identifies waste patterns and root causes
-- Reduces waste by up to 60% compared to v1.0
+    - Predicts optimal order quantities
+    - Suggests recipes to use near-expiry ingredients
+    - Identifies waste patterns and root causes
+    - Reduces waste by up to 60% compared to v1.0
+  </Card>
+</Columns>
 
 ## Stock Management
 
-### AI-Powered Low Stock Alerts
-
-Intelligent alerts that learn from your patterns:
-
-- Predictive alerts before you run out
-- Seasonal adjustment recommendations
-- Event-based usage predictions
-- Supplier lead time optimization
-
 <Note>**New in v2.0**: AI learns your usage patterns and automatically adjusts alert thresholds based on historical data and upcoming events.</Note>
 
+<Columns cols={2}>
+  <Card title="AI-Powered Low Stock Alerts">
+    Intelligent alerts that learn from your patterns:
 
-### Automated Supplier Integration
+    - Predictive alerts before you run out
+    - Seasonal adjustment recommendations
+    - Event-based usage predictions
+    - Supplier lead time optimization
+  </Card>
+  <Card title="Automated Supplier Integration">
+    Seamless ordering with AI optimization:
 
-Seamless ordering with AI optimization:
+    - Automatic purchase order generation
+    - Price comparison across suppliers
+    - Quality-based supplier recommendations
+    - Delivery schedule optimization
+  </Card>
+</Columns>
 
-- Automatic purchase order generation
-- Price comparison across suppliers
-- Quality-based supplier recommendations
-- Delivery schedule optimization
 
 ## IoT Dashboard
 
-Real-time sensor monitoring:
-
-- Live temperature readings
-- RFID location tracking
-- Weight-based inventory levels
-- Freshness indicators
+<Card title="Real-time sensor monitoring:">
+  - Live temperature readings
+  - RFID location tracking
+  - Weight-based inventory levels
+  - Freshness indicators
+</Card>
 
 ## AI Insights
 
-### Usage Pattern Analysis
+<Card title="Usage Pattern Analysis">
+  AI identifies trends and patterns:
 
-AI identifies trends and patterns:
-
-- Peak usage times by day/season
-- Recipe popularity trends
-- Waste hotspots
-- Cost optimization opportunities
-
-### Predictive Ordering
-
+  - Peak usage times by day/season
+  - Recipe popularity trends
+  - Waste hotspots
+  - Cost optimization opportunities
+</Card>
+<Card title="Predictive Ordering">
 Let AI handle your ordering:
-
-```javascript
-// Example: Enable AI auto-ordering
-const autoOrder = await salsa.ai.inventory.enableAutoOrder({
-  location: "kitchen_1",
-  max_order_value: 5000,
-  approval_required_over: 1000,
-  preferred_suppliers: ["sysco", "us_foods"]
-});
-```
+  ```javascript
+  // Example: Enable AI auto-ordering
+  const autoOrder = await salsa.ai.inventory.enableAutoOrder({
+    location: "kitchen_1",
+    max_order_value: 5000,
+    approval_required_over: 1000,
+    preferred_suppliers: ["sysco", "us_foods"]
+  });
+  ```
+</Card>
 
 ## Getting Started
 
