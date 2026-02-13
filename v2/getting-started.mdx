@@ -15,7 +15,7 @@ Before you begin, ensure you have:
 - Access to your restaurant's systems (POS, inventory, etc.)
 - Basic knowledge of your current salsa operations
 - Admin access to configure integrations
-- **New in v2.0**: Optional IoT sensor hardware for quality monitoring
+- <Badge color="green">**New in v2.0**</Badge> Optional IoT sensor hardware for quality monitoring
 
 ## Quick Setup Wizard
 
@@ -71,31 +71,31 @@ Navigate to **Settings > Restaurant Profile** where our AI assistant guides you 
     - Cuisine type and specializations
     - Number of locations and geographic regions
     - Operating hours and peak times
-    - **New**: Upload your menu for automatic recipe suggestions
+    - <Badge color="green">**New**</Badge> Upload your menu for automatic recipe suggestions
 
 #### Kitchen Infrastructure
 
 - Kitchen size, layout, and equipment inventory
     - Number of prep stations and production capacity
     - Refrigeration and storage specifications
-    - **New**: IoT sensor placement recommendations
-    - **New**: Equipment integration (smart ovens, refrigerators)
+    - <Badge color="green">**New**</Badge> IoT sensor placement recommendations
+    - <Badge color="green">**New**</Badge> Equipment integration (smart ovens, refrigerators)
 
 #### Operations
 
 - Daily production volume and historical data
     - Current salsa varieties and recipes
     - Peak production hours and seasonal patterns
-    - **New**: AI analyzes your patterns and suggests optimization
-    - **New**: Waste tracking and sustainability goals
+    - <Badge color="green">**New**</Badge> AI analyzes your patterns and suggests optimization
+    - <Badge color="green">**New**</Badge> Waste tracking and sustainability goals
 
 #### Team & Permissions
 
 - Team structure and department organization
     - Role-based access control (RBAC) configuration
     - Custom permission policies
-    - **New**: Biometric access control integration
-    - **New**: Activity-based authentication rules
+    - <Badge color="green">**New**</Badge> Biometric access control integration
+    - <Badge color="green">**New**</Badge> Activity-based authentication rules
 
 
 
@@ -154,16 +154,17 @@ const qualityConfig = {
 
 v2.0 integrates with a wide range of IoT sensors:
 
-
-**[Temperature Sensors](#temperature-sensors)**  
-Monitor refrigeration and cooking temperatures in real-time.
-
-**[Freshness Sensors](#freshness-sensors)**  
-RFID and chemical sensors track ingredient freshness.
-
-**[Quality Meters](#quality-meters)**  
-Automated pH, viscosity, and consistency measurement.
-
+<Columns cols={3}>
+  <Card title="Temperature Sensors" href="#temperature-sensors">
+    Monitor refrigeration and cooking temperatures in real-time.
+  </Card>
+  <Card title="Freshness Sensors" href="#freshness-sensors">
+    RFID and chemical sensors track ingredient freshness.
+  </Card>
+  <Card title="Quality Meters" href="#quality-meters">
+    Automated pH, viscosity, and consistency measurement.
+  </Card>
+</Columns>
 
 
 ### Setting Up IoT Sensors
