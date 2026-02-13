@@ -35,116 +35,112 @@ Salsa as a Service v2.0 seamlessly connects with your existing restaurant techno
 
 ### Popular POS Integrations
 
-#### Square
+<AccordionGroup>
+   <Accordion title="Square">
+      **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
 
-**Integration Level**: ⭐⭐⭐⭐⭐ Native
+      **Features:**
+      - Real-time sales sync (< 5 second delay)
+      - Bidirectional inventory updates
+      - Automatic menu mapping with AI
+      - Multi-location support
+      - Payment reconciliation
 
-**Features:**
-- Real-time sales sync (< 5 second delay)
-- Bidirectional inventory updates
-- Automatic menu mapping with AI
-- Multi-location support
-- Payment reconciliation
+      **Setup Time**: 5 minutes
 
-**Setup Time**: 5 minutes
+      **API Version**: Square v2 API
 
-**API Version**: Square v2 API
+      ```bash
+      # Quick setup via CLI
+      salsa integrations add square \
+      --oauth \
+      --locations all \
+      --sync realtime
+      ```
+   </Accordion>
+   <Accordion title="Toast">
+      **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
 
-```bash
-# Quick setup via CLI
-salsa integrations add square \
-  --oauth \
-  --locations all \
-  --sync realtime
-```
+      **Features:**
+      - Real-time menu and inventory sync
+      - Complex menu structure support (modifiers, combos)
+      - Multi-location restaurant groups
+      - Labor integration
+      - Gift card and loyalty program sync
 
-#### Toast
+      **Setup Time**: 10 minutes
 
-**Integration Level**: ⭐⭐⭐⭐⭐ Native
+      **API Version**: Toast API v2
 
-**Features:**
-- Real-time menu and inventory sync
-- Complex menu structure support (modifiers, combos)
-- Multi-location restaurant groups
-- Labor integration
-- Gift card and loyalty program sync
+      ```javascript
+      // Setup via SDK
+      const salsa = new SalsaClient(apiKey);
 
-**Setup Time**: 10 minutes
+      await salsa.integrations.connect({
+      provider: 'toast',
+      credentials: {
+         clientId: process.env.TOAST_CLIENT_ID,
+         clientSecret: process.env.TOAST_CLIENT_SECRET,
+         restaurantGuid: process.env.TOAST_RESTAURANT_GUID
+      },
+      options: {
+         syncInterval: '5m',
+         includeLabor: true,
+         menuMapping: 'auto'
+      }
+      });
+      ```
+   </Accordion>
+   <Accordion title="Clover">
+      **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
 
-**API Version**: Toast API v2
+      **Features:**
+      - Clover App Market integration
+      - Real-time inventory sync
+      - Order management
+      - Customer data sync
+      - Reporting integration
 
-```javascript
-// Setup via SDK
-const salsa = new SalsaClient(apiKey);
+      **Setup Time**: 5 minutes
 
-await salsa.integrations.connect({
-  provider: 'toast',
-  credentials: {
-    clientId: process.env.TOAST_CLIENT_ID,
-    clientSecret: process.env.TOAST_CLIENT_SECRET,
-    restaurantGuid: process.env.TOAST_RESTAURANT_GUID
-  },
-  options: {
-    syncInterval: '5m',
-    includeLabor: true,
-    menuMapping: 'auto'
-  }
-});
-```
+      **Installation**: Available in Clover App Market. Search for "Salsa as a Service v2.0" in your Clover dashboard.
+   </Accordion>
+   <Accordion title="Lightspeed">
+      **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
 
-#### Clover
+      **Features:**
+      - Menu and inventory sync
+      - Sales reporting integration
+      - Multi-location support
+      - Customer data integration
 
-**Integration Level**: ⭐⭐⭐⭐⭐ Native
+      **Setup Time**: 15 minutes
 
-**Features:**
-- Clover App Market integration
-- Real-time inventory sync
-- Order management
-- Customer data sync
-- Reporting integration
+      **Compatibility**: Lightspeed Restaurant (formerly Upserve)
+   </Accordion>
+   <Accordion title="TouchBistro">
+      **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
 
-**Setup Time**: 5 minutes
+      **Features:**
+      - Menu and inventory sync
+      - Tableside ordering integration
+      - Multi-location support
+      - Reservation integration
 
-**Installation**: Available in Clover App Market. Search for "Salsa as a Service v2.0" in your Clover dashboard.
+      **Setup Time**: 15 minutes
+   </Accordion>
+   <Accordion title="Revel">
+      **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
 
-#### Lightspeed
+      **Features:**
+      - Enterprise-grade integration
+      - Multi-location support
+      - Advanced reporting
+      - Inventory management sync
 
-**Integration Level**: ⭐⭐⭐⭐ Certified Partner
-
-**Features:**
-- Menu and inventory sync
-- Sales reporting integration
-- Multi-location support
-- Customer data integration
-
-**Setup Time**: 15 minutes
-
-**Compatibility**: Lightspeed Restaurant (formerly Upserve)
-
-#### TouchBistro
-
-**Integration Level**: ⭐⭐⭐⭐ Certified Partner
-
-**Features:**
-- Menu and inventory sync
-- Tableside ordering integration
-- Multi-location support
-- Reservation integration
-
-**Setup Time**: 15 minutes
-
-#### Revel
-
-**Integration Level**: ⭐⭐⭐⭐ Certified Partner
-
-**Features:**
-- Enterprise-grade integration
-- Multi-location support
-- Advanced reporting
-- Inventory management sync
-
-**Setup Time**: 20 minutes
-
+      **Setup Time**: 20 minutes
+   </Accordion>
+</AccordionGroup>
 
 
 ### Enterprise POS Systems
@@ -158,90 +154,87 @@ For large restaurant chains and enterprises:
 
 Automate ingredient ordering with direct distributor integrations:
 
-#### Sysco
+<AccordionGroup>
+   <Accordion title="Sysco">
+      **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
 
-**Integration Level**: ⭐⭐⭐⭐⭐ Native
+      **Features:**
+      - Automated ordering based on AI forecasts
+      - Real-time inventory availability
+      - Pricing and catalog updates
+      - Order tracking and delivery notifications
+      - Invoice reconciliation
 
-**Features:**
-- Automated ordering based on AI forecasts
-- Real-time inventory availability
-- Pricing and catalog updates
-- Order tracking and delivery notifications
-- Invoice reconciliation
+      **Benefits:**
+      - 40% reduction in ordering time
+      - Optimal order quantities based on forecast
+      - Automatic price comparison
+      - Reduced stockouts by 60%
 
-**Benefits:**
-- 40% reduction in ordering time
-- Optimal order quantities based on forecast
-- Automatic price comparison
-- Reduced stockouts by 60%
+      ```python
+      # Example: Automated Sysco ordering
+      from salsa_sdk import SalsaClient
 
-```python
-# Example: Automated Sysco ordering
-from salsa_sdk import SalsaClient
+      client = SalsaClient(api_key="your_key")
 
-client = SalsaClient(api_key="your_key")
+      # Configure auto-ordering
+      sysco_config = client.suppliers.configure("sysco", {
+         "account_number": "123456789",
+         "delivery_window": "tue-thu",
+         "auto_order": True,
+         "approval_threshold": 500,  # Auto-approve under $500
+         "preferred_items": True  # Use cost-effective alternatives
+      })
 
-# Configure auto-ordering
-sysco_config = client.suppliers.configure("sysco", {
-    "account_number": "123456789",
-    "delivery_window": "tue-thu",
-    "auto_order": True,
-    "approval_threshold": 500,  # Auto-approve under $500
-    "preferred_items": True  # Use cost-effective alternatives
-})
+      # AI will automatically place orders based on forecasts
+      ```
+   </Accordion>
+   <Accordion title="US Foods">
+      **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
 
-# AI will automatically place orders based on forecasts
-```
+      **Features:**
+      - Direct ordering through US Foods Connect
+      - Product catalog integration
+      - Pricing and availability
+      - Delivery scheduling
+      - Digital invoicing
 
-#### US Foods
+      **Setup**: Link your US Foods account in Settings > Integrations
+   </Accordion>
+   <Accordion title="Performance Food Group">
+      **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
 
-**Integration Level**: ⭐⭐⭐⭐⭐ Native
+      **Features:**
+      - PFG ordering system integration
+      - Multi-brand support (PFG Customized, Performance Foodservice)
+      - Real-time inventory checking
+      - Order history and analytics
 
-**Features:**
-- Direct ordering through US Foods Connect
-- Product catalog integration
-- Pricing and availability
-- Delivery scheduling
-- Digital invoicing
+      **Brands**: Performance Foodservice, Vistar, Roma, Reinhart
+   </Accordion>
+   <Accordion title="Gordon Food Service">
+      **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
 
-**Setup**: Link your US Foods account in Settings > Integrations
+      **Features:**
+      - GFS Direct ordering
+      - Product information and specs
+      - Delivery management
+      - Price updates
 
-#### Performance Food Group
+      **Regions**: US and Canada
+   </Accordion>
+   <Accordion title="Local Suppliers">
+      **Integration Level**: ⭐⭐⭐ <Badge color="gray">Custom</Badge>
 
-**Integration Level**: ⭐⭐⭐⭐ Certified Partner
+      **Features:**
+      - Custom supplier integration via API
+      - Email-based ordering
+      - Manual order creation with templates
+      - CSV import/export
 
-**Features:**
-- PFG ordering system integration
-- Multi-brand support (PFG Customized, Performance Foodservice)
-- Real-time inventory checking
-- Order history and analytics
-
-**Brands**: Performance Foodservice, Vistar, Roma, Reinhart
-
-#### Gordon Food Service
-
-**Integration Level**: ⭐⭐⭐⭐ Certified Partner
-
-**Features:**
-- GFS Direct ordering
-- Product information and specs
-- Delivery management
-- Price updates
-
-**Regions**: US and Canada
-
-#### Local Suppliers
-
-**Integration Level**: ⭐⭐⭐ Custom
-
-**Features:**
-- Custom supplier integration via API
-- Email-based ordering
-- Manual order creation with templates
-- CSV import/export
-
-**Setup**: Contact our integration team for custom supplier connections
-
+      **Setup**: Contact our integration team for custom supplier connections
+   </Accordion>
+</AccordionGroup>
 
 
 ## Kitchen Management Systems
