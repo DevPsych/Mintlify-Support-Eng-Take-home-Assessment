@@ -11,7 +11,6 @@ This guide helps you resolve common issues with Salsa as a Service v2.0, includi
 
 Before diving into specific issues, run these quick checks:
 
-
 <Steps>
   <Step title="Check System Status">
     Visit our [status page](https://status.salsaasaservice.com) to see if there are any ongoing service issues.
@@ -27,356 +26,365 @@ Before diving into specific issues, run these quick checks:
   </Step>
 </Steps>
 
-
-
 ## Common Issues
 
-### Login and Authentication
-
 <Columns cols={3}>
-  <Card title="Can't Log In" href="#login-issues">
+  <Card title="Login and Authentication" href="#login-and-authentication" >
     Troubleshoot login issues and password problems.
   </Card>
-  <Card title="Two-Factor Authentication" href="#two-factor-authentication">
-    Issues with 2FA setup and authentication codes.
+  <Card title="Data Synchronization" href="#data-synchronization">
+    Issues with data synchronization.
   </Card>
-  <Card title="Account Locked" href="#account-locked">
-    Resolve account lockouts and security issues.
+  <Card title="Production Issues" href="#production-issues">
+    Issues with production.
+  </Card>
+  <Card title="Mobile App Issues" href="#mobile-app-issues">
+    Issues with the mobile app.
+  </Card>
+  <Card title="Performance Issues" href="#performance-issues">
+    Issues with performance.
+  </Card>
+  <Card title="Advanced Troubleshooting" href="#advanced-troubleshooting">
+    Go to advanced troubleshooting.
   </Card>
 </Columns>
 
+### Login and Authentication
 
-#### Login Issues
+<Warning>
+  **Security Note**: Never share your password with anyone. Our support team will never ask for your password.
+</Warning>
 
-<Accordion title="Unable to log into your account">
-   <Steps>
+<AccordionGroup>
+  <Accordion title="Unable to log into your account">
+    <Steps>
       <Step title="Verify Credentials">
-         Double-check your email address and password. Ensure Caps Lock is off.
+        Double-check your email address and password. Ensure Caps Lock is off.
       </Step>
       <Step title="Reset Password">
-         Use the "Forgot Password" link on the login page to reset your password.
+        Use the "Forgot Password" link on the login page to reset your password.
       </Step>
       <Step title="Check Email">
-         Look for account verification emails in your spam folder.
+        Look for account verification emails in your spam folder.
       </Step>
       <Step title="Contact Support">
-         If the issue persists, contact support with your account email address.
+        If the issue persists, contact support with your account email address.
       </Step>
-   </Steps>
-</Accordion>
-
-
-<Warning>**Security Note**: Never share your password with anyone. Our support team will never ask for your password.</Warning>
-
-
-#### Two-Factor Authentication 
-
-<Accordion title="Issues with 2FA codes or setup">
-   <Steps>
+    </Steps>
+  </Accordion>
+  <Accordion title="Issues with 2FA codes or setup">
+    <Steps>
       <Step title="Code Not Working">
-         Ensure your device's time is synchronized
+        Ensure your device's time is synchronized
       </Step>
       <Step title="Lost Device">
-         Use backup codes or contact support
+        Use backup codes or contact support
       </Step>
       <Step title="App Issues">
-         Try a different authenticator app (Google Authenticator, Authy)
+        Try a different authenticator app (Google Authenticator, Authy)
       </Step>
       <Step title="Setup Problems">
-         Follow our [2FA setup guide](/guides/two-factor-auth)
+        Follow our [2FA setup guide](/guides/two-factor-auth)
       </Step>
-   </Steps>
-</Accordion>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
 
 
 ### Data Synchronization
 
-#### POS Integration Issues
-
-<Accordion title="POS data not syncing with Salsa as a Service">
-   <AccordionGroup>
+<AccordionGroup>
+  <Accordion title="POS Integration Issues: POS data not syncing with Salsa as a Service">
+    <AccordionGroup>
       <Accordion title="Square">
-         <Steps>
-            <Step title="Check Square Connection">
-               Verify the Square integration is still connected in your dashboard.
-            </Step>
-            <Step title="Reauthorize Integration">
-               Disconnect and reconnect your Square account.
-            </Step>
-            <Step title="Check API Permissions">
-               Ensure Square API permissions include inventory management.
-            </Step>
-         </Steps>
+        <Steps>
+          <Step title="Check Square Connection">
+            Verify the Square integration is still connected in your dashboard.
+          </Step>
+          <Step title="Reauthorize Integration">
+            Disconnect and reconnect your Square account.
+          </Step>
+          <Step title="Check API Permissions">
+            Ensure Square API permissions include inventory management.
+          </Step>
+        </Steps>
       </Accordion>
-
       <Accordion title="Toast">
-         <Steps>
-            <Step title="Verify Toast API Key">
-               Check that your Toast API credentials are valid and not expired.
-            </Step>
-            <Step title="Check Menu Mapping">
-               Ensure salsa menu items are properly mapped to inventory items.
-            </Step>
-         </Steps>
+        <Steps>
+          <Step title="Verify Toast API Key">
+            Check that your Toast API credentials are valid and not expired.
+          </Step>
+          <Step title="Check Menu Mapping">
+            Ensure salsa menu items are properly mapped to inventory items.
+          </Step>
+        </Steps>
       </Accordion>
-
       <Accordion title="Clover">
-         <Steps>
-            <Step title="Update Clover App">
-               Ensure the Salsa as a Service app is updated in your Clover dashboard.
-            </Step>
-            <Step title="Check Permissions">
-               Verify the app has necessary permissions for data access.
-            </Step>
-         </Steps>
+        <Steps>
+          <Step title="Update Clover App">
+            Ensure the Salsa as a Service app is updated in your Clover dashboard.
+          </Step>
+          <Step title="Check Permissions">
+            Verify the app has necessary permissions for data access.
+          </Step>
+        </Steps>
       </Accordion>
-
       <Accordion title="General">
-         <Steps>
-            <Step title="Check Network Connection">
-               Ensure stable internet connection for both systems.
-            </Step>
-            <Step title="Review Sync Logs">
-               Check the integration logs for error messages.
-            </Step>
-            <Step title="Test Manual Sync">
-               Try manually triggering a data sync from your dashboard.
-            </Step>
-         </Steps>
+        <Steps>
+          <Step title="Check Network Connection">
+            Ensure stable internet connection for both systems.
+          </Step>
+          <Step title="Review Sync Logs">
+            Check the integration logs for error messages.
+          </Step>
+          <Step title="Test Manual Sync">
+            Try manually triggering a data sync from your dashboard.
+          </Step>
+        </Steps>
       </Accordion>
-   </AccordionGroup>
-</Accordion>
+    </AccordionGroup>
+  </Accordion>
+  <Accordion title="Inventory levels not updating correctly">
+    <Note>
+      **Common Causes:**
 
-
-#### Inventory Sync Problems
-
-**Problem**: Inventory levels not updating correctly
-
-**Common Causes:**
-- Network connectivity issues
-- API rate limiting
-- Incorrect unit conversions
-- Data validation errors
-
-**Solutions:**
-
-
-1. **Check Sync Status**
-   Navigate to **Settings > Integrations** and check the sync status.
-
-2. **Manual Sync**
-   Try manually syncing inventory data from the integrations page.
-
-3. **Review Error Logs**
-   Check the error logs for specific sync failures.
-
-4. **Contact Support**
-   If issues persist, contact support with your sync logs.
-
-
+      - Network connectivity issues
+      - API rate limiting
+      - Incorrect unit conversions
+      - Data validation errors
+    </Note>
+    <Steps>
+      <Step title="Check Sync Status">
+        Navigate to **Settings \> Integrations** and check the sync status.
+      </Step>
+      <Step title="Manual Sync">
+        Try manually syncing inventory data from the integrations page.
+      </Step>
+      <Step title="Review Error Logs">
+        Check the error logs for specific sync failures.
+      </Step>
+      <Step title="Contact Support">
+        If issues persist, contact support with your sync logs.
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
 
 ### Production Issues
 
-#### Quality Control Problems
-
-**Problem**: Quality scores not recording correctly
-
-**Solutions:**
-
-1. **Check Device Calibration**: Ensure quality testing devices are properly calibrated
-2. **Review Testing Procedures**: Verify staff are following correct testing protocols
-3. **Update Software**: Ensure the mobile app is updated to the latest version
-4. **Check Permissions**: Verify staff have proper permissions for quality testing
-
-#### Batch Tracking Issues
-
-**Problem**: Production batches not tracking properly
-
-<Note>**Batch Requirements**: Each batch must have a unique batch number and valid recipe assignment.</Note>
-
-
-**Troubleshooting Steps:**
-
-
-1. **Verify Batch Data**
-   Check that all required batch information is entered correctly.
-
-2. **Check Recipe Assignment**
-   Ensure the batch is assigned to a valid recipe.
-
-3. **Review Staff Permissions**
-   Verify the assigned chef has proper permissions for batch management.
-
-
+<AccordionGroup>
+  <Accordion title="Quality scores not recording correctly">
+    <Steps>
+      <Step title="Check Device Calibration">
+        Ensure quality testing devices are properly calibrated
+      </Step>
+      <Step title="Review Testing Procedures">
+        Verify staff are following correct testing protocols
+      </Step>
+      <Step title="Update Software">
+        Ensure the mobile app is updated to the latest version
+      </Step>
+      <Step title="Check Permissions">
+        Verify staff have proper permissions for quality testing
+      </Step>
+    </Steps>
+  </Accordion>
+  <Accordion title="Production batches not tracking properly">
+    <Note>
+      **Batch Requirements**: Each batch must have a unique batch number and valid recipe assignment.
+    </Note>
+    <Steps>
+      <Step title="Verify Batch Data">
+        Check that all required batch information is entered correctly.
+      </Step>
+      <Step title="Check Recipe Assignment">
+        Ensure the batch is assigned to a valid recipe.
+      </Step>
+      <Step title="Review Staff Permissions">
+        Verify the assigned chef has proper permissions for batch management.
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
 
 ### Mobile App Issues
 
-#### App Crashes
-
-**Problem**: Mobile app crashes or freezes
-
-**Solutions:**
-
-
-1. **Update App**
-   Ensure you're running the latest version of the Salsa as a Service mobile app.
-
-2. **Restart App**
-   Force close the app and restart it.
-
-3. **Clear App Data**
-   Clear app cache and data (you'll need to log in again).
-
-4. **Reinstall App**
-   Uninstall and reinstall the app from your device's app store.
-
-
-
-#### Offline Mode Issues
-
-**Problem**: App not working in offline mode
-
-**Solutions:**
-
-1. **Check Offline Data**: Ensure critical data is downloaded for offline use
-2. **Sync Before Going Offline**: Manually sync data before losing internet connection
-3. **Check Storage Space**: Ensure sufficient device storage for offline data
-4. **Update App**: Use the latest app version with improved offline capabilities
+<AccordionGroup>
+  <Accordion title="Mobile app crashes or freezes">
+    <Steps>
+      <Step title="Update App">
+        Ensure you're running the latest version of the Salsa as a Service mobile app.
+      </Step>
+      <Step title="Restart App">
+        Force close the app and restart it.
+      </Step>
+      <Step title="Clear App Data">
+        Clear app cache and data (you'll need to log in again).
+      </Step>
+      <Step title="Reinstall App">
+        Uninstall and reinstall the app from your device's app store.
+      </Step>
+    </Steps>
+  </Accordion>
+  <Accordion title="App not working in offline mode">
+    <Note>
+      **Batch Requirements**: Each batch must have a unique batch number and valid recipe assignment.
+    </Note>
+    <Steps>
+      <Step title="Check Offline Data">
+        Ensure critical data is downloaded for offline use
+      </Step>
+      <Step title="Sync Before Going Offline">
+        Manually sync data before losing internet connection
+      </Step>
+      <Step title="Check Storage Space">
+        Ensure sufficient device storage for offline data
+      </Step>
+      <Step title="Update App">
+        Use the latest app version with improved offline capabilities
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
 
 ### Performance Issues
 
-#### Slow Loading Times
+<Accordion title="Dashboard or app loading slowly">
+  <Columns cols={3}>
+    <Card href="#browser-performance" title="Browser Issues">
+      Clear cache, disable extensions, try different browser.
+    </Card>
+    <Card href="#network-performance" title="Network Issues">
+      Check internet speed, try different network.
+    </Card>
+    <Card href="#data-performance" title="Data Issues">
+      Reduce data load, optimize queries.
+    </Card>
+  </Columns>
+  #### Browser Performance
 
-**Problem**: Dashboard or app loading slowly
+  <Steps>
+    <Step title="Clear Browser Cache">
+      Clear cookies, cache, and browsing data.
+    </Step>
+    <Step title="Disable Extensions">
+      Temporarily disable browser extensions to identify conflicts.
+    </Step>
+    <Step title="Try Different Browser">
+      Test with a different browser to isolate the issue.
+    </Step>
+    <Step title="Update Browser">
+      Ensure you're using the latest browser version.
+    </Step>
+  </Steps>
+</Accordion>
 
-**Solutions:**
+## Advanced Troubleshooting
 
-<Columns cols={3}>
-  <Card title="Browser Issues" href="#browser-performance">
-    Clear cache, disable extensions, try different browser.
+<Columns cols={2}>
+  <Card title="API Integration Issues" href="#api-integration-issues" >
+    Issues with API integration.
   </Card>
-  <Card title="Network Issues" href="#network-performance">
-    Check internet speed, try different network.
-  </Card>
-  <Card title="Data Issues" href="#data-performance">
-    Reduce data load, optimize queries.
+  <Card title="Database Issues" href="#database-issues">
+    Issues with the database.
   </Card>
 </Columns>
 
 
-#### Browser Performance 
-
-<Steps>
-   <Step title="Clear Browser Cache">
-      Clear cookies, cache, and browsing data.
-   </Step>
-   <Step title="Disable Extensions">
-      Temporarily disable browser extensions to identify conflicts.
-   </Step>
-   <Step title="Try Different Browser">
-      Test with a different browser to isolate the issue.
-   </Step>
-   <Step title="Update Browser">
-      Ensure you're using the latest browser version.
-   </Step>
-</Steps>
-
-
-## Advanced Troubleshooting
-
 ### API Integration Issues
 
-#### Authentication Errors
+<AccordionGroup>
+  <Accordion title="API requests returning 401 Unauthorized">
+    <Steps>
+      <Step title="Check API Key">
+        Verify the API key is correct and not expired
+      </Step>
+      <Step title="Check Permissions">
+        Ensure the API key has necessary permissions
+      </Step>
+      <Step title="Check Rate Limits">
+        Verify you haven't exceeded rate limits
+      </Step>
+      <Step title="Check Request Format">
+        Ensure requests are properly formatted
+      </Step>
+    </Steps>
+  </Accordion>
+  <Accordion title="API requests failing due to data format errors">
+    <Note>
+      **Common Issues:**
 
-**Problem**: API requests returning 401 Unauthorized
-
-**Solutions:**
-
-<Steps>
-   <Step title="Check API Key">
-      Verify the API key is correct and not expired
-   </Step>
-   <Step title="Check Permissions">
-      Ensure the API key has necessary permissions
-   </Step>
-   <Step title="Check Rate Limits">
-      Verify you haven't exceeded rate limits
-   </Step>
-   <Step title="Check Request Format">
-      Ensure requests are properly formatted
-   </Step>
-</Steps>
-
-
-#### Data Format Issues
-
-**Problem**: API requests failing due to data format errors
-
-**Common Issues:**
-- Incorrect date formats
-- Invalid data types
-- Missing required fields
-- Invalid JSON syntax
-
-**Solutions:**
-
-```javascript
-// Example: Proper API request format
-const requestData = {
-  name: "House Salsa",
-  category: "salsa",
-  batch_size: 5.0,  // Use numbers, not strings
-  production_date: "2024-01-15T08:00:00Z",  // ISO 8601 format
-  ingredients: [
-    {
-      ingredient_id: "ing_123",
-      quantity: 2.0,
-      unit: "lbs"
-    }
-  ]
-};
-```
+      - Incorrect date formats
+      - Invalid data types
+      - Missing required fields
+      - Invalid JSON syntax
+    </Note>
+    ```javascript
+    // Example: Proper API request format
+    const requestData = {
+    name: "House Salsa",
+    category: "salsa",
+    batch_size: 5.0,  // Use numbers, not strings
+    production_date: "2024-01-15T08:00:00Z",  // ISO 8601 format
+    ingredients: [
+       {
+          ingredient_id: "ing_123",
+          quantity: 2.0,
+          unit: "lbs"
+       }
+    ]
+    };
+    ```
+  </Accordion>
+</AccordionGroup>
 
 ### Database Issues
 
-#### Data Inconsistencies
-
-**Problem**: Data not matching between systems
-
-**Solutions:**
-
-<Steps>
-   <Step title="Check Sync Logs">
+<Accordion title="Data not matching between systems">
+  <Steps>
+    <Step title="Check Sync Logs">
       Review integration logs for sync errors
-   </Step>
-   <Step title="Manual Data Verification">
+    </Step>
+    <Step title="Manual Data Verification">
       Compare data between systems manually
-   </Step>
-   <Step title="Reset Integration">
+    </Step>
+    <Step title="Reset Integration">
       Disconnect and reconnect integrations
-   </Step>
-   <Step title="Contact Support">
+    </Step>
+    <Step title="Contact Support">
       Provide specific examples of data inconsistencies
-   </Step>
-</Steps>
-
+    </Step>
+  </Steps>
+</Accordion>
 
 ## Getting Help
+
+<Columns cols={3}>
+   <Card title="Self-Service Resources" href="#self-service-resources" >
+      Look through our self-service resources.
+   </Card>
+   <Card title="Contact Support" href="#contact-support">
+      Contact us if you need help.
+   </Card>
+   <Card title="Emergency Support" href="#emergency-support">
+      Need emergency support? Click here.
+   </Card>
+</Columns>
+
 
 ### Self-Service Resources
 
 <Columns cols={3}>
-  <Card title="Knowledge Base" href="https://help.salsaasaservice.com">
+  <Card href="https://help.salsaasaservice.com" title="Knowledge Base">
     Search our comprehensive knowledge base for solutions.
   </Card>
-  <Card title="Video Tutorials" href="https://salsaasaservice.com/tutorials">
+  <Card href="https://salsaasaservice.com/tutorials" title="Video Tutorials">
     Watch step-by-step video guides for common tasks.
   </Card>
-  <Card title="Community Forum" href="https://community.salsaasaservice.com">
+  <Card href="https://community.salsaasaservice.com" title="Community Forum">
     Get help from other users and share solutions.
   </Card>
 </Columns>
-
 
 ### Contact Support
 
@@ -392,38 +400,40 @@ When contacting support, please include:
 **Support Channels:**
 
 <Columns cols={2}>
-  <Card title="Email" icon="envelope" horizontal>
-    support@salsaasaservice.com
+  <Card icon="envelope" horizontal title="Email">
+    [support@salsaasaservice.com](mailto:support@salsaasaservice.com)
   </Card>
-  <Card title="Live Chat" icon="comments" horizontal>
+  <Card icon="comments" horizontal title="Live Chat">
     Available in your dashboard
   </Card>
-  <Card title="Phone" icon="phone" horizontal>
+  <Card icon="phone" horizontal title="Phone">
     1-800-SALSA-HELP (Mon-Fri, 9 AM - 6 PM EST)
   </Card>
-  <Card title="Support Ticket" icon="ticket" horizontal>
+  <Card icon="ticket" horizontal title="Support Ticket">
     Create a ticket in your dashboard
   </Card>
 </Columns>
 
-<Note>**Response Times**: We typically respond to support requests within 2-4 hours during business hours.</Note>
-
+<Note>
+  **Response Times**: We typically respond to support requests within 2-4 hours during business hours.
+</Note>
 
 ### Emergency Support
 
 For critical issues affecting your restaurant operations:
 
 <Columns cols={2}>
-  <Card title="Emergency Hotline" icon="light-emergency-on" horizontal>
+  <Card icon="light-emergency-on" horizontal title="Emergency Hotline">
     1-800-SALSA-911
   </Card>
-  <Card title="Text Support" icon="message-captions" horizontal>
+  <Card icon="message-captions" horizontal title="Text Support">
     Text "HELP" to SALSA-911
   </Card>
-  <Card title="Priority Chat" icon="comments" horizontal>
+  <Card icon="comments" horizontal title="Priority Chat">
     Available for Enterprise customers
   </Card>
 </Columns>
 
-<Warning>**Emergency Support**: Available 24/7 for Enterprise customers. Standard support hours apply for other plans.</Warning>
-
+<Warning>
+  **Emergency Support**: Available 24/7 for Enterprise customers. Standard support hours apply for other plans.
+</Warning>
