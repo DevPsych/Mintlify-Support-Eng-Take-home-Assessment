@@ -33,37 +33,37 @@ Before diving into specific issues, run these quick checks:
 
 ### Login and Authentication
 
-
-**[Can't Log In](#login-issues)**  
-Troubleshoot login issues and password problems.
-
-**[Two-Factor Authentication](#two-factor-auth)**  
-Issues with 2FA setup and authentication codes.
-
-**[Account Locked](#account-locked)**  
-Resolve account lockouts and security issues.
-
-
-
-#### Login Issues 
-
-**Problem**: Unable to log into your account
-
-**Solutions:**
+<Columns cols={3}>
+  <Card title="Can't Log In" href="#login-issues">
+    Troubleshoot login issues and password problems.
+  </Card>
+  <Card title="Two-Factor Authentication" href="#two-factor-authentication">
+    Issues with 2FA setup and authentication codes.
+  </Card>
+  <Card title="Account Locked" href="#account-locked">
+    Resolve account lockouts and security issues.
+  </Card>
+</Columns>
 
 
-1. **Verify Credentials**
-   Double-check your email address and password. Ensure Caps Lock is off.
+#### Login Issues
 
-2. **Reset Password**
-   Use the "Forgot Password" link on the login page to reset your password.
-
-3. **Check Email**
-   Look for account verification emails in your spam folder.
-
-4. **Contact Support**
-   If the issue persists, contact support with your account email address.
-
+<Accordion title="Unable to log into your account">
+   <Steps>
+      <Step title="Verify Credentials">
+         Double-check your email address and password. Ensure Caps Lock is off.
+      </Step>
+      <Step title="Reset Password">
+         Use the "Forgot Password" link on the login page to reset your password.
+      </Step>
+      <Step title="Check Email">
+         Look for account verification emails in your spam folder.
+      </Step>
+      <Step title="Contact Support">
+         If the issue persists, contact support with your account email address.
+      </Step>
+   </Steps>
+</Accordion>
 
 
 <Warning>**Security Note**: Never share your password with anyone. Our support team will never ask for your password.</Warning>
@@ -230,33 +230,35 @@ Resolve account lockouts and security issues.
 
 **Solutions:**
 
-
-**[Browser Issues](#browser-performance)**  
-Clear cache, disable extensions, try different browser.
-
-**[Network Issues](#network-performance)**  
-Check internet speed, try different network.
-
-**[Data Issues](#data-performance)**  
-Reduce data load, optimize queries.
-
+<Columns cols={3}>
+  <Card title="Browser Issues" href="#browser-performance">
+    Clear cache, disable extensions, try different browser.
+  </Card>
+  <Card title="Network Issues" href="#network-performance">
+    Check internet speed, try different network.
+  </Card>
+  <Card title="Data Issues" href="#data-performance">
+    Reduce data load, optimize queries.
+  </Card>
+</Columns>
 
 
 #### Browser Performance 
 
-
-1. **Clear Browser Cache**
-   Clear cookies, cache, and browsing data.
-
-2. **Disable Extensions**
-   Temporarily disable browser extensions to identify conflicts.
-
-3. **Try Different Browser**
-   Test with a different browser to isolate the issue.
-
-4. **Update Browser**
-   Ensure you're using the latest browser version.
-
+<Steps>
+   <Step title="Clear Browser Cache">
+      Clear cookies, cache, and browsing data.
+   </Step>
+   <Step title="Disable Extensions">
+      Temporarily disable browser extensions to identify conflicts.
+   </Step>
+   <Step title="Try Different Browser">
+      Test with a different browser to isolate the issue.
+   </Step>
+   <Step title="Update Browser">
+      Ensure you're using the latest browser version.
+   </Step>
+</Steps>
 
 
 ## Advanced Troubleshooting
@@ -269,10 +271,21 @@ Reduce data load, optimize queries.
 
 **Solutions:**
 
-1. **Check API Key**: Verify the API key is correct and not expired
-2. **Check Permissions**: Ensure the API key has necessary permissions
-3. **Check Rate Limits**: Verify you haven't exceeded rate limits
-4. **Check Request Format**: Ensure requests are properly formatted
+<Steps>
+   <Step title="Check API Key">
+      Verify the API key is correct and not expired
+   </Step>
+   <Step title="Check Permissions">
+      Ensure the API key has necessary permissions
+   </Step>
+   <Step title="Check Rate Limits">
+      Verify you haven't exceeded rate limits
+   </Step>
+   <Step title="Check Request Format">
+      Ensure requests are properly formatted
+   </Step>
+</Steps>
+
 
 #### Data Format Issues
 
@@ -311,25 +324,37 @@ const requestData = {
 
 **Solutions:**
 
-1. **Check Sync Logs**: Review integration logs for sync errors
-2. **Manual Data Verification**: Compare data between systems manually
-3. **Reset Integration**: Disconnect and reconnect integrations
-4. **Contact Support**: Provide specific examples of data inconsistencies
+<Steps>
+   <Step title="Check Sync Logs">
+      Review integration logs for sync errors
+   </Step>
+   <Step title="Manual Data Verification">
+      Compare data between systems manually
+   </Step>
+   <Step title="Reset Integration">
+      Disconnect and reconnect integrations
+   </Step>
+   <Step title="Contact Support">
+      Provide specific examples of data inconsistencies
+   </Step>
+</Steps>
+
 
 ## Getting Help
 
 ### Self-Service Resources
 
-
-**[Knowledge Base](https://help.salsaasaservice.com)**  
-Search our comprehensive knowledge base for solutions.
-
-**[Video Tutorials](https://salsaasaservice.com/tutorials)**  
-Watch step-by-step video guides for common tasks.
-
-**[Community Forum](https://community.salsaasaservice.com)**  
-Get help from other users and share solutions.
-
+<Columns cols={3}>
+  <Card title="Knowledge Base" href="https://help.salsaasaservice.com">
+    Search our comprehensive knowledge base for solutions.
+  </Card>
+  <Card title="Video Tutorials" href="https://salsaasaservice.com/tutorials">
+    Watch step-by-step video guides for common tasks.
+  </Card>
+  <Card title="Community Forum" href="https://community.salsaasaservice.com">
+    Get help from other users and share solutions.
+  </Card>
+</Columns>
 
 
 ### Contact Support
