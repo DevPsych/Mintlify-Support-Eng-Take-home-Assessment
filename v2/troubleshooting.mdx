@@ -95,8 +95,8 @@ Before diving into specific issues, run these quick checks:
 
 <AccordionGroup>
   <Accordion title="POS Integration Issues: POS data not syncing with Salsa as a Service">
-    <AccordionGroup>
-      <Accordion title="Square">
+    <Tabs>
+      <Tab title="Square">
         <Steps>
           <Step title="Check Square Connection">
             Verify the Square integration is still connected in your dashboard.
@@ -108,8 +108,8 @@ Before diving into specific issues, run these quick checks:
             Ensure Square API permissions include inventory management.
           </Step>
         </Steps>
-      </Accordion>
-      <Accordion title="Toast">
+      </Tab>
+      <Tab title="Toast">
         <Steps>
           <Step title="Verify Toast API Key">
             Check that your Toast API credentials are valid and not expired.
@@ -118,8 +118,8 @@ Before diving into specific issues, run these quick checks:
             Ensure salsa menu items are properly mapped to inventory items.
           </Step>
         </Steps>
-      </Accordion>
-      <Accordion title="Clover">
+      </Tab>
+      <Tab title="Clover">
         <Steps>
           <Step title="Update Clover App">
             Ensure the Salsa as a Service app is updated in your Clover dashboard.
@@ -128,8 +128,8 @@ Before diving into specific issues, run these quick checks:
             Verify the app has necessary permissions for data access.
           </Step>
         </Steps>
-      </Accordion>
-      <Accordion title="General">
+      </Tab>
+      <Tab title="General">
         <Steps>
           <Step title="Check Network Connection">
             Ensure stable internet connection for both systems.
@@ -141,8 +141,8 @@ Before diving into specific issues, run these quick checks:
             Try manually triggering a data sync from your dashboard.
           </Step>
         </Steps>
-      </Accordion>
-    </AccordionGroup>
+      </Tab>
+    </Tabs>
   </Accordion>
   <Accordion title="Inventory levels not updating correctly">
     <Note>
