@@ -33,121 +33,119 @@ Salsa as a Service v2.0 seamlessly connects with your existing restaurant techno
 
 ## Point of Sale Systems
 
-### Popular POS Integrations
+<Tabs>
+   <Tab title="Popular POS Integrations">
+      <AccordionGroup>
+         <Accordion title="Square">
+            **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
 
-<AccordionGroup>
-   <Accordion title="Square">
-      **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
+            **Features:**
+            - Real-time sales sync (< 5 second delay)
+            - Bidirectional inventory updates
+            - Automatic menu mapping with AI
+            - Multi-location support
+            - Payment reconciliation
 
-      **Features:**
-      - Real-time sales sync (< 5 second delay)
-      - Bidirectional inventory updates
-      - Automatic menu mapping with AI
-      - Multi-location support
-      - Payment reconciliation
+            **Setup Time**: 5 minutes
 
-      **Setup Time**: 5 minutes
+            **API Version**: Square v2 API
 
-      **API Version**: Square v2 API
+            ```bash
+            # Quick setup via CLI
+            salsa integrations add square \
+            --oauth \
+            --locations all \
+            --sync realtime
+            ```
+         </Accordion>
+         <Accordion title="Toast">
+            **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
 
-      ```bash
-      # Quick setup via CLI
-      salsa integrations add square \
-      --oauth \
-      --locations all \
-      --sync realtime
-      ```
-   </Accordion>
-   <Accordion title="Toast">
-      **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
+            **Features:**
+            - Real-time menu and inventory sync
+            - Complex menu structure support (modifiers, combos)
+            - Multi-location restaurant groups
+            - Labor integration
+            - Gift card and loyalty program sync
 
-      **Features:**
-      - Real-time menu and inventory sync
-      - Complex menu structure support (modifiers, combos)
-      - Multi-location restaurant groups
-      - Labor integration
-      - Gift card and loyalty program sync
+            **Setup Time**: 10 minutes
 
-      **Setup Time**: 10 minutes
+            **API Version**: Toast API v2
 
-      **API Version**: Toast API v2
+            ```javascript
+            // Setup via SDK
+            const salsa = new SalsaClient(apiKey);
 
-      ```javascript
-      // Setup via SDK
-      const salsa = new SalsaClient(apiKey);
+            await salsa.integrations.connect({
+            provider: 'toast',
+            credentials: {
+               clientId: process.env.TOAST_CLIENT_ID,
+               clientSecret: process.env.TOAST_CLIENT_SECRET,
+               restaurantGuid: process.env.TOAST_RESTAURANT_GUID
+            },
+            options: {
+               syncInterval: '5m',
+               includeLabor: true,
+               menuMapping: 'auto'
+            }
+            });
+            ```
+         </Accordion>
+         <Accordion title="Clover">
+            **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
 
-      await salsa.integrations.connect({
-      provider: 'toast',
-      credentials: {
-         clientId: process.env.TOAST_CLIENT_ID,
-         clientSecret: process.env.TOAST_CLIENT_SECRET,
-         restaurantGuid: process.env.TOAST_RESTAURANT_GUID
-      },
-      options: {
-         syncInterval: '5m',
-         includeLabor: true,
-         menuMapping: 'auto'
-      }
-      });
-      ```
-   </Accordion>
-   <Accordion title="Clover">
-      **Integration Level**: ⭐⭐⭐⭐⭐ <Badge color="green">Native</Badge>
+            **Features:**
+            - Clover App Market integration
+            - Real-time inventory sync
+            - Order management
+            - Customer data sync
+            - Reporting integration
 
-      **Features:**
-      - Clover App Market integration
-      - Real-time inventory sync
-      - Order management
-      - Customer data sync
-      - Reporting integration
+            **Setup Time**: 5 minutes
 
-      **Setup Time**: 5 minutes
+            **Installation**: Available in Clover App Market. Search for "Salsa as a Service v2.0" in your Clover dashboard.
+         </Accordion>
+         <Accordion title="Lightspeed">
+            **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
 
-      **Installation**: Available in Clover App Market. Search for "Salsa as a Service v2.0" in your Clover dashboard.
-   </Accordion>
-   <Accordion title="Lightspeed">
-      **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
+            **Features:**
+            - Menu and inventory sync
+            - Sales reporting integration
+            - Multi-location support
+            - Customer data integration
 
-      **Features:**
-      - Menu and inventory sync
-      - Sales reporting integration
-      - Multi-location support
-      - Customer data integration
+            **Setup Time**: 15 minutes
 
-      **Setup Time**: 15 minutes
+            **Compatibility**: Lightspeed Restaurant (formerly Upserve)
+         </Accordion>
+         <Accordion title="TouchBistro">
+            **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
 
-      **Compatibility**: Lightspeed Restaurant (formerly Upserve)
-   </Accordion>
-   <Accordion title="TouchBistro">
-      **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
+            **Features:**
+            - Menu and inventory sync
+            - Tableside ordering integration
+            - Multi-location support
+            - Reservation integration
 
-      **Features:**
-      - Menu and inventory sync
-      - Tableside ordering integration
-      - Multi-location support
-      - Reservation integration
+            **Setup Time**: 15 minutes
+         </Accordion>
+         <Accordion title="Revel">
+            **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
 
-      **Setup Time**: 15 minutes
-   </Accordion>
-   <Accordion title="Revel">
-      **Integration Level**: ⭐⭐⭐⭐ <Badge color="blue">Certified Partner</Badge>
+            **Features:**
+            - Enterprise-grade integration
+            - Multi-location support
+            - Advanced reporting
+            - Inventory management sync
 
-      **Features:**
-      - Enterprise-grade integration
-      - Multi-location support
-      - Advanced reporting
-      - Inventory management sync
-
-      **Setup Time**: 20 minutes
-   </Accordion>
-</AccordionGroup>
-
-
-### Enterprise POS Systems
-
-For large restaurant chains and enterprises:
-
-
+            **Setup Time**: 20 minutes
+         </Accordion>
+      </AccordionGroup>
+   </Tab>
+   <Tab title="Enterprise POS Systems">
+      For large restaurant chains and enterprises:
+   </Tab>
+</Tabs>
 
 
 ## Supply Chain & Distributors
@@ -240,114 +238,109 @@ Automate ingredient ordering with direct distributor integrations:
 ## Kitchen Management Systems
 
 
-
-
 ## Enterprise Systems
 
-### ERP Integration
+<Tabs>
+   <Tab title="ERP Integration">
+      Connect with enterprise resource planning systems:
 
-Connect with enterprise resource planning systems:
+      <AccordionGroup>
+         <Accordion title="SAP">
+            **SAP Products Supported:**
+            - SAP Business One
+            - SAP S/4HANA
+            - SAP ECC
 
-#### SAP
+            **Integration Points:**
+            - Materials management (MM)
+            - Financial accounting (FI)
+            - Controlling (CO)
+            - Production planning (PP)
 
-**SAP Products Supported:**
-- SAP Business One
-- SAP S/4HANA
-- SAP ECC
+            **Data Flow:**
+            ```
+            Salsa → SAP: Purchase orders, inventory movements, production data
+            SAP → Salsa: Master data, cost centers, GL accounts, suppliers
+            ```
 
-**Integration Points:**
-- Materials management (MM)
-- Financial accounting (FI)
-- Controlling (CO)
-- Production planning (PP)
+            **Setup**: Enterprise customers receive dedicated SAP integration support
+         </Accordion>
+         <Accordion title="Oracle">
+            **Oracle Products Supported:**
+            - Oracle E-Business Suite
+            - Oracle Cloud ERP
+            - Oracle NetSuite
 
-**Data Flow:**
-```
-Salsa → SAP: Purchase orders, inventory movements, production data
-SAP → Salsa: Master data, cost centers, GL accounts, suppliers
-```
+            **Integration Points:**
+            - Supply chain management
+            - Financial management
+            - Procurement
+            - Inventory management
 
-**Setup**: Enterprise customers receive dedicated SAP integration support
+            **API**: REST and SOAP APIs supported
+         </Accordion>
+         <Accordion title="Microsoft Dynamics">
+            **Dynamics Products Supported:**
+            - Dynamics 365 Finance
+            - Dynamics 365 Supply Chain Management
+            - Dynamics 365 Business Central
 
-#### Oracle
-
-**Oracle Products Supported:**
-- Oracle E-Business Suite
-- Oracle Cloud ERP
-- Oracle NetSuite
-
-**Integration Points:**
-- Supply chain management
-- Financial management
-- Procurement
-- Inventory management
-
-**API**: REST and SOAP APIs supported
-
-#### Microsoft Dynamics
-
-**Dynamics Products Supported:**
-- Dynamics 365 Finance
-- Dynamics 365 Supply Chain Management
-- Dynamics 365 Business Central
-
-**Integration**: Native Azure AD integration with SSO support
-
-
-
-### Accounting Software
-
-
+            **Integration**: Native Azure AD integration with SSO support
+         </Accordion>
+      </AccordionGroup>
+   </Tab>
+   <Tab title="Accounting Software">
+   </Tab>
+</Tabs> 
 
 
 ## Communication & Notifications
 
 ### Team Communication
 
-#### Slack
+<AccordionGroup>
+   <Accordion title="Slack">
+      **Features:**
+      - Real-time alerts and notifications
+      - Production updates
+      - Quality alerts
+      - Inventory warnings
+      - Custom channel routing
 
-**Features:**
-- Real-time alerts and notifications
-- Production updates
-- Quality alerts
-- Inventory warnings
-- Custom channel routing
+      **Bot Commands:**
+      ```
+      /salsa forecast          # View today's forecast
+      /salsa inventory [item]  # Check stock levels
+      /salsa production        # Current production status
+      /salsa quality           # Recent quality scores
+      ```
 
-**Bot Commands:**
-```
-/salsa forecast          # View today's forecast
-/salsa inventory [item]  # Check stock levels
-/salsa production        # Current production status
-/salsa quality           # Recent quality scores
-```
+      **Setup**: Add the Salsa bot from Slack App Directory
+   </Accordion>
+   <Accordion title="Microsoft Teams">
+      **Features:**
+      - Teams channel integration
+      - Adaptive cards for rich notifications
+      - Bot commands and interactions
+      - File sharing (reports, exports)
 
-**Setup**: Add the Salsa bot from Slack App Directory
+      **Integration**: Available in Microsoft Teams App Store
+   </Accordion>
+   <Accordion title="SMS & Voice">
+      **Providers:**
+      - Twilio
+      - AWS SNS
+      - Custom SMS gateway
 
-#### Microsoft Teams
+      **Use Cases:**
+      - Critical alerts (temperature violations)
+      - Delivery notifications
+      - Approval requests
+      - Emergency notifications
 
-**Features:**
-- Teams channel integration
-- Adaptive cards for rich notifications
-- Bot commands and interactions
-- File sharing (reports, exports)
-
-**Integration**: Available in Microsoft Teams App Store
-
-#### SMS & Voice
-
-**Providers:**
-- Twilio
-- AWS SNS
-- Custom SMS gateway
-
-**Use Cases:**
-- Critical alerts (temperature violations)
-- Delivery notifications
-- Approval requests
-- Emergency notifications
-
-**Setup**: Configure in Settings > Notifications > SMS
-
+      **Setup**: Configure in Settings > Notifications > SMS
+   </Accordion>
+</AccordionGroup>
 
 
 ## IoT & Hardware Integration
@@ -359,47 +352,47 @@ SAP → Salsa: Master data, cost centers, GL accounts, suppliers
 
 ## Business Intelligence & Analytics
 
-#### Tableau
 
-**Integration Type:** Native Connector
+<AccordionGroup>
+   <Accordion title="Tableau">
+      **Integration Type:** Native Connector
 
-**Features:**
-- Direct connection to Salsa data warehouse
-- Pre-built dashboard templates
-- Real-time data refresh
-- Custom metrics and dimensions
+      **Features:**
+      - Direct connection to Salsa data warehouse
+      - Pre-built dashboard templates
+      - Real-time data refresh
+      - Custom metrics and dimensions
 
-**Data Available:**
-- Production metrics
-- Inventory analytics
-- Quality trends
-- Cost analysis
-- Forecast accuracy
+      **Data Available:**
+      - Production metrics
+      - Inventory analytics
+      - Quality trends
+      - Cost analysis
+      - Forecast accuracy
+   </Accordion>
+   <Accordion title="Power BI">
+      **Integration Type:** Native Connector
 
-#### Power BI
+      **Features:**
+      - Power BI Desktop and Service support
+      - Scheduled refresh
+      - Row-level security
+      - Custom visuals
 
-**Integration Type:** Native Connector
+      **Install:** Search "Salsa as a Service" in Power BI connectors
+   </Accordion>
+   <Accordion title="Looker">
+      **Integration Type:** LookML Models
 
-**Features:**
-- Power BI Desktop and Service support
-- Scheduled refresh
-- Row-level security
-- Custom visuals
+      **Features:**
+      - Pre-built LookML models
+      - Embedded analytics
+      - Custom explores
+      - API integration
 
-**Install:** Search "Salsa as a Service" in Power BI connectors
-
-#### Looker
-
-**Integration Type:** LookML Models
-
-**Features:**
-- Pre-built LookML models
-- Embedded analytics
-- Custom explores
-- API integration
-
-**Contact:** Enterprise customers receive LookML support
-
+      **Contact:** Enterprise customers receive LookML support
+   </Accordion>
+</AccordionGroup>
 
 
 ## Custom Integrations
