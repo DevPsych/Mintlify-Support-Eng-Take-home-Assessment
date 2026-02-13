@@ -71,60 +71,81 @@ Before diving into specific issues, run these quick checks:
 
 #### Two-Factor Authentication 
 
-**Problem**: Issues with 2FA codes or setup
+<Accordion title="Issues with 2FA codes or setup">
+   <Steps>
+      <Step title="Code Not Working">
+         Ensure your device's time is synchronized
+      </Step>
+      <Step title="Lost Device">
+         Use backup codes or contact support
+      </Step>
+      <Step title="App Issues">
+         Try a different authenticator app (Google Authenticator, Authy)
+      </Step>
+      <Step title="Setup Problems">
+         Follow our [2FA setup guide](/guides/two-factor-auth)
+      </Step>
+   </Steps>
+</Accordion>
 
-**Solutions:**
-
-1. **Code Not Working**: Ensure your device's time is synchronized
-2. **Lost Device**: Use backup codes or contact support
-3. **App Issues**: Try a different authenticator app (Google Authenticator, Authy)
-4. **Setup Problems**: Follow our [2FA setup guide](/guides/two-factor-auth)
 
 ### Data Synchronization
 
 #### POS Integration Issues
 
-**Problem**: POS data not syncing with Salsa as a Service
+<Accordion title="POS data not syncing with Salsa as a Service">
+   <AccordionGroup>
+      <Accordion title="Square">
+         <Steps>
+            <Step title="Check Square Connection">
+               Verify the Square integration is still connected in your dashboard.
+            </Step>
+            <Step title="Reauthorize Integration">
+               Disconnect and reconnect your Square account.
+            </Step>
+            <Step title="Check API Permissions">
+               Ensure Square API permissions include inventory management.
+            </Step>
+         </Steps>
+      </Accordion>
 
+      <Accordion title="Toast">
+         <Steps>
+            <Step title="Verify Toast API Key">
+               Check that your Toast API credentials are valid and not expired.
+            </Step>
+            <Step title="Check Menu Mapping">
+               Ensure salsa menu items are properly mapped to inventory items.
+            </Step>
+         </Steps>
+      </Accordion>
 
-#### Square
+      <Accordion title="Clover">
+         <Steps>
+            <Step title="Update Clover App">
+               Ensure the Salsa as a Service app is updated in your Clover dashboard.
+            </Step>
+            <Step title="Check Permissions">
+               Verify the app has necessary permissions for data access.
+            </Step>
+         </Steps>
+      </Accordion>
 
-1. **Check Square Connection**
-   Verify the Square integration is still connected in your dashboard.
-
-2. **Reauthorize Integration**
-   Disconnect and reconnect your Square account.
-
-3. **Check API Permissions**
-   Ensure Square API permissions include inventory management.
-
-#### Toast
-
-1. **Verify Toast API Key**
-   Check that your Toast API credentials are valid and not expired.
-
-2. **Check Menu Mapping**
-   Ensure salsa menu items are properly mapped to inventory items.
-
-#### Clover
-
-1. **Update Clover App**
-   Ensure the Salsa as a Service app is updated in your Clover dashboard.
-
-2. **Check Permissions**
-   Verify the app has necessary permissions for data access.
-
-#### General
-
-1. **Check Network Connection**
-   Ensure stable internet connection for both systems.
-
-2. **Review Sync Logs**
-   Check the integration logs for error messages.
-
-3. **Test Manual Sync**
-   Try manually triggering a data sync from your dashboard.
-
+      <Accordion title="General">
+         <Steps>
+            <Step title="Check Network Connection">
+               Ensure stable internet connection for both systems.
+            </Step>
+            <Step title="Review Sync Logs">
+               Check the integration logs for error messages.
+            </Step>
+            <Step title="Test Manual Sync">
+               Try manually triggering a data sync from your dashboard.
+            </Step>
+         </Steps>
+      </Accordion>
+   </AccordionGroup>
+</Accordion>
 
 
 #### Inventory Sync Problems
