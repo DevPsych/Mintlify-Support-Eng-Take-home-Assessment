@@ -13,11 +13,7 @@ Unlock the full potential of Salsa as a Service v2.0 with AI-powered features, I
 
 v2.0's AI forecasting engine uses multiple machine learning models to predict salsa demand with industry-leading accuracy:
 
-
-
-
 ### Configuring Advanced Forecasting
-
 
 <Steps>
   <Step title="Select Forecast Horizon">
@@ -56,7 +52,6 @@ v2.0's AI forecasting engine uses multiple machine learning models to predict sa
 </Steps>
 
 
-
 ### Interpreting Forecast Results
 
 The AI provides rich forecast data with confidence intervals:
@@ -91,30 +86,28 @@ The AI provides rich forecast data with confidence intervals:
 
 Monitor and improve your forecast accuracy over time:
 
-
-#### Accuracy Metrics
-
-- **MAPE**: Mean Absolute Percentage Error
+<Columns cols={2}>
+  <Card title="Accuracy Metrics">
+    - **MAPE**: Mean Absolute Percentage Error
     - **RMSE**: Root Mean Square Error
     - **Forecast Bias**: Systematic over/under prediction
     - **Confidence Intervals**: Actual vs predicted ranges
-
-#### Model Performance
-
-View which models perform best for different scenarios:
+  </Card>
+  <Card title="Model Performance">
+    View which models perform best for different scenarios:
     - Short-term vs long-term accuracy
     - Recipe-specific performance
     - Seasonal pattern recognition
     - Event impact prediction
-
-#### Continuous Learning
-
-The AI automatically:
+  </Card>
+  <Card title="Continuous Learning">
+    The AI automatically:
     - Retrains models weekly with new data
     - Adjusts weights based on accuracy
     - Identifies and adapts to new patterns
     - A/B tests model improvements
-
+  </Card>
+</Columns>
 
 
 ## IoT Sensor Integration
@@ -184,9 +177,7 @@ AI analyzes sensor patterns to predict equipment failures before they occur:
 
 Let AI manage your ingredient inventory automatically:
 
-
 #### Configuration
-
 ```javascript
     const autoOrderConfig = {
       enabled: true,
@@ -209,9 +200,9 @@ Let AI manage your ingredient inventory automatically:
     };
     ```
 
-#### Order Logic
-
-The AI considers multiple factors:
+<Columns cols={2}>
+  <Card title="Order Logic">
+    The AI considers multiple factors:
 
     1. **Demand Forecast**: Predicted usage for next 7-30 days
     2. **Current Inventory**: Real-time stock levels
@@ -219,17 +210,17 @@ The AI considers multiple factors:
     4. **Cost Optimization**: Best pricing and minimum order quantities
     5. **Seasonality**: Seasonal ingredient availability
     6. **Quality**: Supplier quality scores and ratings
-
-#### Order Monitoring
-
-Track automated orders:
+  </Card>
+  <Card title="Order Monitoring">
+    Track automated orders:
 
     - Order confirmation and tracking
     - Delivery status updates
     - Quality verification upon receipt
     - Automatic inventory updates
     - Cost tracking and budget alerts
-
+  </Card>
+</Columns>
 
 
 ### Smart Production Scheduling
@@ -281,34 +272,32 @@ Create custom automation workflows with our visual workflow builder:
 Manage restaurant chains of any size with centralized control:
 
 
-#### Centralized Dashboard
-
-- View all locations on a single dashboard
+<Columns cols={2}>
+  <Card title="Centralized Dashboard">
+    - View all locations on a single dashboard
     - Compare performance across locations
     - Identify top and bottom performers
     - Share best practices across the organization
-
-#### Location Groups
-
-- Organize locations into regions or brands
+  </Card>
+  <Card title="Location Groups">
+    - Organize locations into regions or brands
     - Apply group-level policies and settings
     - Run regional reports and analytics
     - Manage bulk operations (updates, rollouts)
-
-#### Recipe Distribution
-
-- Maintain recipe consistency across locations
+  </Card>
+  <Card title="Recipe Distribution">
+    - Maintain recipe consistency across locations
     - Push recipe updates to selected locations
     - Allow location-specific modifications
     - Track recipe version history
-
-#### Inventory Transfers
-
-- Transfer inventory between locations
+  </Card>
+  <Card title="Inventory Transfers">
+    - Transfer inventory between locations
     - Optimize stock distribution
     - Reduce waste through inter-location transfers
     - Track transfer history and costs
-
+  </Card>
+</Columns>
 
 
 ### Advanced RBAC (Role-Based Access Control)
